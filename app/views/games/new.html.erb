@@ -1,0 +1,14 @@
+<h1> Bienvenue au Longest Word Game! </h1>
+<div class="class="mx-auto" style="width: 200px;">
+
+<% @letters.flatten.each do |letter| %>
+<%= letter %>
+<% end %>
+</div>
+
+<form action="submit" method="TODO" data-turbo="false">
+<label for="exampleInputEmail1" class="col-form-label"> What's your word ? </label>
+  <input type="Word" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+<%= button_to "Valid", score_path %>
